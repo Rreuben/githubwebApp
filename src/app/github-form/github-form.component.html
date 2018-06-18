@@ -1,6 +1,6 @@
-<form>
+<form class = "search-form">
   <div class = "form-group" style = "padding : 2.5% 2.5% 1.25% 2.5%">
     <img src="../favicon.ico" float = "left" max width = "46%">
-    <input type = "text" placeholder = "  Search..." id = "searchBar">
+    <input type = "text" placeholder = " Search..." id = "searchBar" [( ngModel )] = "username" name = "username" ( keyup ) = "findProfile()">
   </div>
 </form>
