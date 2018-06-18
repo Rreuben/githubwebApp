@@ -16,12 +16,12 @@ import { ProfileService } from './services/profile.service' ;
     GithubComponent,
     GithubFormComponent,
     GithubProfileComponent,
-    GithubLandingPageComponent,
-    HttpModule
+    GithubLandingPageComponent
   ],
   imports: [
     BrowserModule,
-    NgbModule.forRoot()
+    NgbModule.forRoot(),
+    HttpModule
   ],
   providers: [ ProfileService ],
   bootstrap: [ AppComponent ]
