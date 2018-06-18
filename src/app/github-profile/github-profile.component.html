@@ -2,8 +2,8 @@
   <div class = "panel panel-default">
     <div class = "panel-heading">
       {{ profile.name }}<br><small>({{ profile.login }})</small>
-      <span *ngIf = "profile.company">, Works at {{ profile.company }}</span>
-      {{ profile.location }}
+      <span *ngIf = "profile.company">{{ profile.company }}</span><br><br>
+      <i class = "fa fa-map-marker" style = "font-size : 15px"> {{ profile.location }}</i>
     </div>
     <div class = "panel-body">
       <div class = "row">
@@ -14,8 +14,8 @@
           <ul class = "list-group">
             <li class = "list-group-item" *ngIf = "profile.bio">{{ profile.bio }}</li>
             <li class = "list-group-item" *ngIf = "profile.hireable">Available for hire</li>
-            <li class = "list-group-item" *ngIf = "profile.blog"><a href = "{{ profile.blog }}" target = "blank">{{ profile.blog }}</a></li>
-            <li class = "list-group-item" *ngIf = "profile.email"><a href = "{{ profile.email }}" target = "blank">{{ profile.email }}</a></li>
+            <li class = "list-group-item" *ngIf = "profile.blog"><a href = "{{ profile.blog }}" target = "_blank">{{ profile.blog }}</a></li>
+            <li class = "list-group-item" *ngIf = "profile.email"><a href = "{{ profile.email }}" target = "_blank">{{ profile.email }}</a></li>
           </ul>
         </div>
         <div class = "col-md-4">
@@ -26,6 +26,18 @@
               <span class = "label label-default">Followers {{ profile.followers }}</span>
               <span class = "label label-default">Following {{ profile.following }}</span>
             </p>
+            <p><a href = "{{ profile.html_url }}" id="viewBtn" target = "_blank" class = "btn-info" style = "padding : 5px; border-radius : 2.5px">View this profile on GitHub</a></p>
+            <div class = "panel panel-default">
+              <div class = "panel-heading">
+                <h3 class = "panel-title">Repositories</h3>
+              </div>
+              <div class = "panel-body" *ngFor = "let repo of repos">
+                <p class = "clearfix">
+                  {{ repo.name }}<a href = "{{ repo.html_url }}" target = "_blank" class= "btn-info pull-right" style = "padding : 5px; border-radius : 2.5px">View this project on GitHub</a>
+                </p>
+                <p>{{ repo.description }}</p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
