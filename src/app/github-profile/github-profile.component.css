@@ -1,0 +1,26 @@
+#searchForm {
+  padding: 1.5%;
+}
+#iconImg {
+  padding: 0 0 1% 43%;
+  margin: 0 0 0 5.5%;
+}
+#searchBar {
+  padding: 0.5% 0 0.5% 0;
+}
+#profileImg {
+  height: 300px;
+  padding: 5%;
+  margin-left: 32%;
+}
+.list-group {
+  padding: 5%;
+}
+.scrollable-panel {
+  height: 450px;
+  overflow-y: scroll;
+  width: 100%;
+}
+.label {
+  margin: 5px;
+}
